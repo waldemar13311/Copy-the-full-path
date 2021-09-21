@@ -45,13 +45,14 @@ HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\CommandSto
 HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\CommandStore\shell\Slash(Linux-style)\command
 ```
 ### Be careful! Use your paths to files!
-#### It is creating item for files. 
+
+#### It is creating item for files. Icon, MUIVerb and SubCommands.
 ![](png/ForFiles.png)
 
 #### It is creating item for folders. Icon, MUIVerb and SubCommands.
 ![](png/ForFolders.png)
 
-#### Is is creating sub-item for copy in backslash-style. Icon, MUIVerb and SubCommands.
+#### Is is creating sub-item for copy in backslash-style.
 ![](png/ForWindows.png)
 
 
@@ -67,4 +68,4 @@ And like this:
 cmd /c start /min "" powershell -WindowStyle Hidden -ExecutionPolicy Bypass -File "C:\Users\walde\Documents\Projects\PowerShell\Copy to clipboard\main.ps1" "%1" "linux"
 ```
 
-## Thank you for reading and good!
+## Thank you for reading and good luck!
