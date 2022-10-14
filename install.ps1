@@ -21,15 +21,23 @@ function Create-New-2LevelItem
     New-ItemProperty -Path "$Path\$Name\command" -Name "(default)" -Value $Command -PropertyType "String"
 }
 
-$PathForInstall = Read-Host "Hello! Enter a path to install Copy-the-full-path";
+
+Write-Output "Hello!"
+Write-Output "To the correct installation you need start this script with administrative rights"
+$PathForInstall = Read-Host "Enter a path where you want to have a folder with Copy-the-full-path";
 
 if(!(Test-Path -Path $PathForInstall))
 {
-    Write-Output "$PathForInstall is uncorrect path";
+    Write-Error "$PathForInstall is uncorrect path";
     Write-Output "Stopping install script";
 
     Exit
 }
+
+Write-Output "`nCopy-the-full-path will be install in $PathForInstall`n"
+
+New-Item -Path $PathForInstall -Name "Copy-the-full-path" -ItemType Directory
+$PathForInstall = "$PathForInstall\Copy-the-full-path"
 
 # Coping files in folder
 Write-Output "Copying main.ps1 in $PathForInstall"
@@ -43,7 +51,7 @@ Copy-Item ".\logo.ico" -Destination $PathForInstall
 $NameOfNewItem = "zCopy-the-full-path"
 $RegPathForFiles = "HKLM:\SOFTWARE\Classes\``*\shell\"
 $RegPathForFolders = "HKLM:\SOFTWARE\Classes\Directory\shell\"
-Create-New-1LevelItem -Path $RegPathForFiles -Name $NameOfNewItem
+Create-New-1LevelItem -Path $RegPathForFiles -Name $NameOfNewItem 
 Create-New-1LevelItem -Path $RegPathForFolders -Name $NameOfNewItem
 
 # Creating sub-item
