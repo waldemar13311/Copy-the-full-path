@@ -24,12 +24,13 @@ function Create-New-2LevelItem
 
 Write-Output "Hello!"
 Write-Output "To the correct installation you need start this script with administrative rights"
-$PathForInstall = Read-Host "Enter a path where you want to have a folder with Copy-the-full-path";
+$PathForInstall = Read-Host "Enter a path where you want to have a folder with Copy-the-full-path"
+$PathForInstall = (Resolve-Path $PathForInstall).Path.TrimEnd("\")
 
-if(!(Test-Path -Path $PathForInstall))
+if(!(Test-Path -Path $PathForInstall -PathType Container))
 {
-    Write-Error "$PathForInstall is uncorrect path";
-    Write-Output "Stopping install script";
+    Write-Output "Path `"$PathForInstall`" is uncorrect"
+    Write-Output "Stopping install script"
 
     Exit
 }
