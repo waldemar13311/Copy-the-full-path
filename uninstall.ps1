@@ -38,3 +38,5 @@ Remove-Item –Path "$RegPathForSubItems\$ThirdSubItem" –Recurse
 
 Write-Output "Deleting Copy-the-full-path folder"
 Remove-Item -Path $PathForUninstall -Recurse -Force
+
+Write-Output "Deleting is done"
