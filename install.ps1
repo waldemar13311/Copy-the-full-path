@@ -60,7 +60,7 @@ $FirstSubItem = "Windows-style"
 $SecondSubItem = "Linux-style"
 $ThirdSubItem = "Linux-style for WSL"
 $RegPathForSubItems = "HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\CommandStore\shell\"
-$CommandTemplate = "cmd /c start /min `"`" powershell -WindowStyle Hidden -ExecutionPolicy Bypass -File $PathForInstall\main.ps1 `"%1`""
+$CommandTemplate = "cmd /c start /min `"`" powershell -WindowStyle Hidden -ExecutionPolicy Bypass -File `"$PathForInstall\main.ps1`" `"%1`""
 
 Create-New-2LevelItem -Path $RegPathForSubItems -Name $FirstSubItem -Command "$CommandTemplate `"windows`""
 Create-New-2LevelItem -Path $RegPathForSubItems -Name $SecondSubItem -Command "$CommandTemplate `"linux`""
