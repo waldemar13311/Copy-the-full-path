@@ -7,11 +7,11 @@
 <h3  align="center">Copy the full path</h3>
 </div>
 
-1. [Description](#description)
-2. [How it work?](#howitwork)
-3. [Gif exaples](#gifexaples)
-4. [Installation](#installation)
-5. [Uninstallation](#uninstallation)
+1. ### [Description](#description)
+2. ### [How it work?](#howitwork)
+3. ### [Gif exaples](#gifexaples)
+4. ### [Installation](#installation)
+5. ### [Uninstallation](#uninstallation)
 
 ## Description <a name="description"></a>
 It is a simple PowerShell script that can help you copy full paths of files or folders from Windows' explorer context menu.
