@@ -20,12 +20,13 @@ switch ($slashStyle) {
         $path = $path.Replace("\", "/")
         $letterDrive = $path.Substring(0, $path.IndexOf(":"))
         $path = $path.Replace("$letterDrive`:", "/mnt/" + $letterDrive.ToLower())
+
+        if($path.Contains(" ")) {
+            $path = "`"$path`""
+        }
     }
 }
 
-if($path.Contains(" ")) {
-    $path = "`"$path`""
-}
 
 [Windows.Clipboard]::SetText($path) 
  

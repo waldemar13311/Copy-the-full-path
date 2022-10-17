@@ -11,17 +11,15 @@
 It is a simple PowerShell script that can help you copy full paths of files or folders from Windows' explorer context menu.
 
 ## How it work?
-You have a file or folder and you need to copy the full path of it. You just make a right-mouse click, select the needed type of slash(in Windows style or in Linux style or style for WSL) and use it in your terminal or another program.
+You have a file or folder and you need to copy the full path of it. You just make a right-mouse click, select the needed type of slash(in Windows style or in Linux style or in style for WSL) and use it in your terminal or another program.
 
 I don't know why Microsoft didn't make this useful function in the Explorer 🤔.
 
 ## Gif exaples
 ### Example of work with a file
-#TODO !!! NewGIF
 ![](gif/FileExample.gif)
 
 ### Example of work with a folder
-#TODO !!! NewGIF
 ![](gif/FolderExample.gif)
 
 ## Installation
@@ -32,7 +30,7 @@ For installation, **you need administrative rights** because the installation ps
 ```bash
 PS C:\Users\user\Downloads> git clone https://github.com/waldemar13311/Copy-the-full-path.git
 ```
-1. Change a folder to Copy-the-full-path
+3. Change a folder to Copy-the-full-path
 ```bash
 PS C:\Users\user\Downloads> cd .\Copy-the-full-path\
 ```
@@ -51,6 +49,8 @@ Enter a path where you want to have a folder with Copy-the-full-path: C:\Program
 Copy-the-full-path will be install in C:\Program Files
 
 ...(some output)
+
+Installation is done
 ```
 6. That's all
    
